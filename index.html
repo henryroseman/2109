@@ -16,36 +16,49 @@
   <!-- Custom styles for this template -->
   <link href="css/business-frontpage.css" rel="stylesheet">
 
+<style>
+  .wrapper{
+  width:70%;
+}
+@media(max-width:992px){
+ .wrapper{
+  width:100%;
+} 
+}
+.panel-heading {
+  padding: 0;
+  border:0;
+}
+.panel-title>a, .panel-title>a:active{
+  display:block;
+  padding:15px;
+  color:#555;
+  font-size:16px;
+  font-weight:bold;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  word-spacing:3px;
+  text-decoration:none;
+}
+.panel-heading  a:before {
+   font-family: 'Glyphicons Halflings';
+   content: "\e114";
+   float: right;
+   transition: all 0.5s;
+}
+.panel-heading.active a:before {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
+} 
+</style>
 </head>
 
 <body>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Music Theory Reference</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Intervalic Relationships</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Scale Types</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Chord Construction</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <!-- loaded at bottom -->
   </nav>
 
   <!-- Header -->
@@ -69,15 +82,16 @@
         <hr>
         <p>It can be hard to learn about music theory. There are so many resources online, it begins to get overwhelming. In an attempt to solve this, this website is an aggragate of the best resouces on a number of important music theory topics.</p>
        <p>Use the nar bar or the info cards below to learn more!</p>
-        <a class="btn btn-primary btn-lg" href="#resources">Start learning! &raquo;</a>
+
+        <a class="btn btn-primary btn-lg" href="#resources" data-toggle="tooltip" title="Click To Jump To Resources Section!" onclick="forceUnroll()">Start learning! &raquo;</a>
       </div>
       <div class="col-md-4 mb-5">
         <h2>Contact Us</h2>
         <hr>
         <address>
-          <strong>Start Bootstrap</strong>
-          <br>3481 Melrose Place
-          <br>Beverly Hills, CA 90210
+          <strong>Music Theory Reference</strong>
+          <br>1201 E Union St
+          <br>Seattle, WA 98122
           <br>
         </address>
         <address>
@@ -85,19 +99,21 @@
           (123) 456-7890
           <br>
           <abbr title="Email">E:</abbr>
-          <a href="mailto:#">name@example.com</a>
+          <a href="mailto:#">MusicalRef@example.com</a>
         </address>
       </div>
     </div>
     <!-- /.row -->
     <a id="resources"></a><br>
     <br>
-    <div><h1>Resources</h1></div>
+    <div id="flip"><h1 href="#clapse" data-toggle="collapse"><span id="lapse">Resources &#9662;</span></h1></div>
 
+<div id="clapse" class="collapse">
     <div class="row">
       <div class="col-md-4 mb-5">
         <div class="card h-100">
-          <img class="card-img-top" src="https://math.seattleacademy.org/henryroseman/2109/intervals.png" alt="">
+
+          <img class="card-img-top" src="https://math.seattleacademy.org/henryroseman/2109/intervals.png" alt="" class="w-100 hover-shadow">
           <div class="card-body">
             <h4 class="card-title">Intervallic Relationships</h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.</p>
@@ -109,20 +125,20 @@
       </div>
       <div class="col-md-4 mb-5">
         <div class="card h-100">
-          <img class="card-img-top" src="https://math.seattleacademy.org/henryroseman/2109/Scale%20Types.png" alt="">
+          <img class="card-img-top" src="https://math.seattleacademy.org/henryroseman/2109/Scale%20Types.png" alt="" class="w-100 hover-shadow">
           <div class="card-body">
             <h4 class="card-title">Scale Types</h4>
             <iframe width="310" height="200" src="https://www.youtube.com/embed/o6FVtZ-bkyU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus totam ut praesentium aut.</p>
+            <p class="card-text">Information on the construction of different type of scales and modes.</p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
+            <a href="#" class="btn btn-primary" onclick="window.open('https://www.classicfm.com/discover-music/latest/guide-to-musical-modes/','_blank')">Find Out More!</a>
           </div>
         </div>
       </div>
       <div class="col-md-4 mb-5">
         <div class="card h-100">
-          <img class="card-img-top" src="https://math.seattleacademy.org/henryroseman/2109/de06638cf6c2942bc76f6468b272a197.png" alt="">
+          <img class="card-img-top" src="https://math.seattleacademy.org/henryroseman/2109/de06638cf6c2942bc76f6468b272a197.png" class="w-100 hover-shadow" alt="">
           <div class="card-body">
             <h4 class="card-title">Card title</h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
@@ -136,12 +152,16 @@
     <!-- /.row -->
 
   </div>
+
+
+
+  
   <!-- /.container -->
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Henry Roseman 2021</p>
+      <p class="m-0 text-center text-white">&copy; Henry Roseman 2021</p>
     </div>
     <!-- /.container -->
   </footer>
@@ -149,7 +169,40 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+      <script id="rendered-js" >
+$('.panel-collapse').on('show.bs.collapse', function () {
+    $(this).siblings('.panel-heading').addClass('active');
+  });
 
+  $('.panel-collapse').on('hide.bs.collapse', function () {
+    $(this).siblings('.panel-heading').removeClass('active');
+  });
+    </script>
+
+    <script>
+  let lp = 2;
+
+function unfold(){
+if (lp == 1){
+  $("#lapse").html("Resources &#9662;");
+  lp = 2;
+} else {
+  $("#lapse").html("Resources &#9652;");
+  lp = 1;
+}
+}
+$("#flip").click(unfold);
+
+function forceUnroll(){
+  $("laspe").click()
+}
+
+$("nav").load("2109nav.html");
+
+    </script>
+  
 </body>
 
 </html>
