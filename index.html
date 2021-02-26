@@ -106,7 +106,7 @@
     <!-- /.row -->
     <a id="resources"></a><br>
     <br>
-    <div id="flip"><h1 href="#clapse" data-toggle="collapse"><span id="lapse">Resources &#9662;</span></h1></div>
+    <div id="flip"><h1 href="#clapse" data-toggle="collapse"><span id="lapse">Resources &#9656;</span></h1></div>
 
 <div id="clapse" class="collapse">
     <div class="row">
@@ -188,10 +188,10 @@ $('.panel-collapse').on('show.bs.collapse', function () {
 
 function unfold(){
 if (lp == 1){
-  $("#lapse").html("Resources &#9662;");
+  $("#lapse").html("Resources &#9656;");
   lp = 2;
 } else {
-  $("#lapse").html("Resources &#9652;");
+  $("#lapse").html("Resources &#9662;");
   lp = 1;
 }
 }
